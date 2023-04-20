@@ -1,13 +1,12 @@
 
 
 h1{
-    width: 100%;
-    height: 100%;
     text-align: center; 
     text-decoration: underline; 
     padding: 0; 
     margin: 0;
 }
+
 
 h2{
     text-align: center; 
@@ -15,48 +14,140 @@ h2{
     padding: 0; 
     margin: 0;
 }
+
+h3{
+    text-align: center; 
+    text-decoration: underline; 
+    font-size: 25px; 
+    margin: 0px; 
+    padding: 1px; 
+    bottom: 0; 
+    position: absolute; 
+    width: 100%;
+}
+
+h8{
+    margin: 0; 
+    padding: 0; 
+    text-align: left; 
+    font-weight: 900; 
+    font-size: 30px; 
+    text-decoration: underline;
+    position: absolute;
+    width: 100%; 
+    left: 44%;
+}
+
+.headDiv{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("./50bg.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background-image: url("./marble.jpg");
+    margin: 0;
+    padding: 0;
+}
+
 html{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.anim{
     overflow: hidden;
 }
 
-.bg{
-    height: 5085px;
-    width: 4076px;
-    transform: translate(-15px, -15px);
+.milk{
+    pointer-events:none; 
+    height: 500%;
+    width: 500%;
     position: absolute;
     background-color: black;
     margin: 0;
     padding: 0;
-    
+    z-index: 1;
 
-    -moz-animation: milk 7s forwards;
-    animation: milk 7s forwards;
-
-    -moz-animation-duration: normal;
+    animation: milk 9s forwards;
     animation-duration: normal;
-
-    -moz-animation-direction: normal;
     animation-direction: normal;
-
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
-
-    z-index: 2;
+    animation-delay: 0.7s;
 }
 
 .pour{
-    height: 2624px;
-    width: 130px;
-    position: absolute;
-    top: -65%;
-    right: 30%;
+    pointer-events:none; 
+    animation: hidepour 0.1s forwards;
+    animation-delay: 1.3s;
 
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0%;
+    right: 20%;
+    z-index: 2
+}
+
+.cover{
+    pointer-events:none; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
     z-index: 3;
+    left: 60%;
+
+    animation: cover 0.7s forwards;
+}
+
+.inglist{
+    font-size: 20px;
+    margin: 0; 
+    padding: 0; 
+    font-weight: bolder;
+    transition: font-size 0.5s ease;
+}
+
+.inglist:hover{
+    font-size: 30px !important;
+}
+
+.sass{
+    margin: 0; 
+    padding: 0; 
+    font-size: 15px; 
+    font-style: oblique;
+}
+
+.button{
+    background-color: black;
+    transform: size 0.3s ease;
 }
 
 @keyframes milk {
-    0% {transform: translate(-15px, -15px) }
-    25% {transform: translate(-2000px, -2000px); }
-    100% {transform: translate(-2000px, -2000px); opacity: 0;}
+    0% {transform: translate(0px, 0px) }
+    20% {transform: translate(-50%, -50%); }
+    100% {transform: translate(-50%, -50%); opacity: 0;}
     
+}
+
+@keyframes cover {
+    0% {transform: translate(0px, 0px);}
+    100%{transform: translate(-160%, 200%);}
+    
+}
+
+@keyframes hidepour {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
