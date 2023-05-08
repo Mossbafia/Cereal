@@ -155,6 +155,28 @@ html{
     font-style: oblique;
 }
 
+.FHeader{
+    text-align: center; 
+    padding: 0; 
+    margin: 0;
+    font-size: 8vh;
+}
+
+.FInternal{
+    text-align: center; 
+    padding: 0; 
+    margin: 0;
+    font-size: 4vh;
+}
+
+.FSub{
+    text-align: center; 
+    padding: 0; 
+    margin: 0;
+    font-size: 2vh;
+    font-style: italic;
+}
+
 
 @keyframes milk {
     0% {transform: translate(0px, 0px) }
